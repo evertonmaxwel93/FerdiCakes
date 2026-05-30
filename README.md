@@ -33,9 +33,9 @@ Uma ferramenta interativa que soluciona a principal fricção do cliente ao enco
 2.  **Formato do Bolo** (Redondo ou formato de Coração).
 3.  **Recheio Principal** (Brigadeiro Meio Amargo, Ninho, Beijinho, Maracujá, Doce de Leite, Café ou Caramelo Salgado).
 4.  **Adicionais Premium** (Nutella ou Geleias).
-5.  **Estilo de Decoração Artística** (Padrão, Vintage personalizada, Pulverização cor escura ou Papel de Arroz).
+5.  **Nível de Decoração Artística** (Multi-seleção suportada: Padrão, Vintage personalizada e/ou Pintura com Cor Escura por pulverização).
 
-O preço é recalculado instantaneamente na tela. Ao clicar em **"Fazer Pedido no WhatsApp"**, o site gera automaticamente um link do WhatsApp com uma mensagem pré-formatada contendo todos os detalhes do pedido e o valor final estimado, agilizando drasticamente o atendimento da chef.
+O preço é recalculado instantaneamente na tela somando de forma cumulativa as adições selecionadas. Ao clicar em **"Fazer Pedido no WhatsApp"**, o site gera automaticamente um link do WhatsApp com uma mensagem pré-formatada contendo todos os detalhes do pedido (incluindo as decorações combinadas) e o valor final estimado, agilizando drasticamente o atendimento da chef.
 
 ### 2. 🗂️ Cardápio Dinâmico por Abas
 Organização dos produtos da marca em abas fluidas de transição rápida (Bolos Artísticos, Bento Cakes, Cupcakes/Doces) com fotos de alta definição reais do portfólio.
@@ -68,12 +68,11 @@ Ferdi Cakes/
 └── assets/
     └── images/         # Fotos originais e logotipo da marca
         ├── logo.png             # Logo vetorizada da Ferdi Cakes
-        ├── background.jpg       # Imagem ambiental oficial
-        ├── monster_cake.jpg     # Bolo temático de RPG/D&D
-        ├── vintage_cherry.jpg   # Bolo Vintage (Hero Banner)
-        ├── ocean_waves.jpg      # Bolo com acabamento de ondas
-        ├── jujutsu_kaisen.jpg   # Bolo temático de Anime
-        └── damon_salvatore.jpg   # Bolo temático Pop/TV
+        ├── background.jpg       # Bolo G Artístico (Acabamento em ouro e cacau)
+        ├── monster_cake.jpg     # Bolo P Artístico (Mímico RPG - Destaque Hero e Catálogo)
+        ├── ocean_waves.jpg      # Bolo Beach Waves (Seção Sobre - Ondas marinhas azuis)
+        ├── jujutsu_kaisen.jpg   # Bolo PP Artístico (Prison Realm - Olhos esculpidos 3D)
+        └── glass_cake.jpg       # Bolo M Artístico (Vampire Gothic - Sangue e cacos de vidro de açúcar)
 ```
 
 ---

@@ -1267,3 +1267,25 @@ h1, h2, h3, h4 {
   70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
   100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
+
+/* =========================================
+   NOVAS REGRAS DE LAYOUT E ESTILO (V2)
+   ========================================= */
+
+/* Menu em 4 colunas no Desktop */
+@media (min-width: 992px) {
+  .menu-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+
+/* Grids da Calculadora (2 colunas e 2 linhas) */
+.size-grid,
+.art-grid {
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+
+/* Borda Dourada no Card de Resultados */
+.calculator-results {
+  border: 1.5px solid var(--clr-brand-gold);
+}

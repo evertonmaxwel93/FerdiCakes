@@ -98,7 +98,7 @@
         <div class="about-grid">
           <div class="about-images">
             <div class="about-img-item" id="about-img-1">
-              <img src="./assets/images/vintage_cherry.jpg" alt="Bolo Vintage Cherry por Ferdi Cakes">
+              <img src="./assets/images/glass_cake.jpg" alt="Bolo Artístico de Vidro por Ferdi Cakes">
             </div>
             <div class="about-img-item" id="about-img-2">
               <img src="./assets/images/ocean_waves.jpg" alt="Bolo Beach Waves com detalhes de ondas reais">
@@ -170,12 +170,12 @@
             <!-- Bolo P -->
             <div class="menu-card" id="card-bolo-p">
               <div class="menu-card-img">
-                <img src="./assets/images/vintage_cherry.jpg" alt="Bolo P Vintage por Ferdi Cakes">
+                <img src="./assets/images/monster_cake.jpg" alt="Bolo Artístico Mímico RPG por Ferdi Cakes">
                 <span class="menu-card-badge">P (15cm)</span>
               </div>
               <div class="menu-card-content">
                 <h3 class="menu-card-title">Bolo Artístico P</h3>
-                <p class="menu-card-desc">O queridinho dos aniversários! Serve 15 fatias. Perfeito para decorações em Chantininho ou estilo Vintage.</p>
+                <p class="menu-card-desc">O queridinho dos aniversários! Serve 15 fatias. Nosso icônico Bolo Mímico de RPG ou decorações de alto impacto visual.</p>
                 <div class="menu-card-footer">
                   <div class="menu-card-price">R$ 160<span>,00</span></div>
                   <a href="#calculadora" class="menu-card-action">Montar Bolo <i class="fa-solid fa-arrow-right"></i></a>
@@ -307,7 +307,7 @@
             <!-- Passo 1: Tamanho -->
             <div class="calc-step">
               <h3 class="calc-step-title"><span>1</span> Escolha o Tamanho</h3>
-              <div class="options-grid">
+              <div class="options-grid size-grid">
                 <div class="option-card size-option" data-value="pp">
                   <input type="radio" name="cake-size" value="pp">
                   <div class="option-card-title">PP</div>
@@ -386,26 +386,21 @@
             <!-- Passo 5: Nível de Decoração Artística -->
             <div class="calc-step">
               <h3 class="calc-step-title"><span>5</span> Nível de Arte & Decoração</h3>
-              <div class="options-grid">
+              <div class="options-grid art-grid">
                 <div class="option-card art-option selected" data-value="standard">
-                  <input type="radio" name="cake-art" value="standard" checked>
+                  <input type="checkbox" name="cake-art" value="standard" checked>
                   <div class="option-card-title">Padrão</div>
                   <div class="option-card-subtitle">Glacê & Bico (Inclusa)</div>
                 </div>
                 <div class="option-card art-option" data-value="vintage">
-                  <input type="radio" name="cake-art" value="vintage">
+                  <input type="checkbox" name="cake-art" value="vintage">
                   <div class="option-card-title">Vintage/Complexa</div>
                   <div class="option-card-subtitle" id="calc-art-vintage-subtitle">+ R$ 15,00</div>
                 </div>
                 <div class="option-card art-option" data-value="dark">
-                  <input type="radio" name="cake-art" value="dark">
+                  <input type="checkbox" name="cake-art" value="dark">
                   <div class="option-card-title">Cor Escura</div>
                   <div class="option-card-subtitle" id="calc-art-dark-subtitle">+ R$ 15,00</div>
-                </div>
-                <div class="option-card art-option" data-value="ricepaper">
-                  <input type="radio" name="cake-art" value="ricepaper">
-                  <div class="option-card-title">Papel de Arroz</div>
-                  <div class="option-card-subtitle">+ R$ 15,00</div>
                 </div>
               </div>
             </div>
@@ -606,10 +601,6 @@
             <li>
               <i class="fa-solid fa-location-dot footer-contact-icon"></i>
               <span>Av. Joaquim da Costa Lima, 1083 - Vilar Novo.<br>Belford Roxo - RJ.</span>
-            </li>
-            <li>
-              <i class="fa-solid fa-envelope footer-contact-icon"></i>
-              <span>siteferdicakes@gmail.com</span>
             </li>
             <li>
               <i class="fa-solid fa-phone footer-contact-icon"></i>

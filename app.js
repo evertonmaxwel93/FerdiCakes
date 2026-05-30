@@ -108,9 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
       p: 15,
       m: 20,
       g: 30
-    },
-    // Papel de Arroz: R$ 15 fixo
-    artRicePaper: 15
+    }
   };
 
   const calcForm = {
@@ -118,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
     shape: 'round', // Padrão: Redondo
     filling: '',
     extra: 'none',
-    art: 'standard'
+    art: ['standard'] // Padrão: ['standard'] (suporta multi-seleção)
   };
 
   // Elementos do DOM da Calculadora
@@ -149,7 +147,63 @@ document.addEventListener('DOMContentLoaded', () => {
   setupVisualOption(sizeCards, 'size', updateCalculator);
   setupVisualOption(shapeCards, 'shape', updateCalculator);
   setupVisualOption(extraCards, 'extra', updateCalculator);
-  setupVisualOption(artCards, 'art', updateCalculator);
+
+  // Configurar eventos para Arte & Decoração (Multi-seleção de Checkboxes)
+  artCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const val = card.getAttribute('data-value');
+      const input = card.querySelector('input');
+      
+      if (val === 'standard') {
+        // Se escolheu Padrão, desmarca todas as outras customizações
+        calcForm.art = ['standard'];
+        artCards.forEach(c => {
+          const v = c.getAttribute('data-value');
+          const inp = c.querySelector('input');
+          if (v === 'standard') {
+            c.classList.add('selected');
+            if (inp) inp.checked = true;
+          } else {
+            c.classList.remove('selected');
+            if (inp) inp.checked = false;
+          }
+        });
+      } else {
+        // Se escolheu outra arte (vintage ou dark)
+        // 1. Remover 'standard' e desmarcar o card padrão no UI
+        const standardCard = Array.from(artCards).find(c => c.getAttribute('data-value') === 'standard');
+        if (standardCard) {
+          standardCard.classList.remove('selected');
+          const standardInp = standardCard.querySelector('input');
+          if (standardInp) standardInp.checked = false;
+        }
+        calcForm.art = calcForm.art.filter(v => v !== 'standard');
+        
+        // 2. Alternar o status da arte selecionada
+        if (calcForm.art.includes(val)) {
+          calcForm.art = calcForm.art.filter(v => v !== val);
+          card.classList.remove('selected');
+          if (input) input.checked = false;
+        } else {
+          calcForm.art.push(val);
+          card.classList.add('selected');
+          if (input) input.checked = true;
+        }
+        
+        // 3. Fallback: Se o usuário desmarcar tudo, volta a selecionar Padrão
+        if (calcForm.art.length === 0) {
+          calcForm.art = ['standard'];
+          if (standardCard) {
+            standardCard.classList.add('selected');
+            const standardInp = standardCard.querySelector('input');
+            if (standardInp) standardInp.checked = true;
+          }
+        }
+      }
+      
+      updateCalculator();
+    });
+  });
 
   function setupVisualOption(elements, key, callback) {
     elements.forEach(card => {
@@ -223,19 +277,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 4. Arte / Decoração
-    if (calcForm.art === 'vintage') {
-      const cost = cakePrices.artVintage[calcForm.size] || 0;
-      extraCost += cost;
-      artName = `Vintage Customizada (+R$ ${cost})`;
-    } else if (calcForm.art === 'dark') {
-      const cost = cakePrices.artDark[calcForm.size] || 0;
-      extraCost += cost;
-      artName = `Pintura Cor Escura (+R$ ${cost})`;
-    } else if (calcForm.art === 'ricepaper') {
-      extraCost += cakePrices.artRicePaper;
-      artName = `Papel de Arroz (+R$ 15)`;
-    } else {
+    let artNames = [];
+    calcForm.art.forEach(artType => {
+      if (artType === 'vintage') {
+        const cost = cakePrices.artVintage[calcForm.size] || 0;
+        extraCost += cost;
+        artNames.push(`Vintage Customizada (+R$ ${cost})`);
+      } else if (artType === 'dark') {
+        const cost = cakePrices.artDark[calcForm.size] || 0;
+        extraCost += cost;
+        artNames.push(`Pintura Cor Escura (+R$ ${cost})`);
+      }
+    });
+
+    if (artNames.length === 0) {
       artName = 'Padrão Clássico (Inclusa)';
+    } else {
+      artName = artNames.join(' + ');
     }
 
     // 5. Total
