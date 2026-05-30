@@ -33,7 +33,7 @@ Uma ferramenta interativa que soluciona a principal fricção do cliente ao enco
 2.  **Formato do Bolo** (Redondo ou formato de Coração).
 3.  **Recheio Principal** (Brigadeiro Meio Amargo, Ninho, Beijinho, Maracujá, Doce de Leite, Café ou Caramelo Salgado).
 4.  **Adicionais Premium** (Nutella ou Geleias).
-5.  **Nível de Decoração Artística** (Multi-seleção suportada: Padrão, Vintage personalizada e/ou Pintura com Cor Escura por pulverização).
+5.  **Nível de Decoração Artística** (Multi-seleção suportada: Padrão, Vintage personalizada, Pintura com Cor Escura e/ou Papel de Arroz).
 
 O preço é recalculado instantaneamente na tela somando de forma cumulativa as adições selecionadas. Ao clicar em **"Fazer Pedido no WhatsApp"**, o site gera automaticamente um link do WhatsApp com uma mensagem pré-formatada contendo todos os detalhes do pedido (incluindo as decorações combinadas) e o valor final estimado, agilizando drasticamente o atendimento da chef.
 

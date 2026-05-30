@@ -108,7 +108,9 @@ document.addEventListener('DOMContentLoaded', () => {
       p: 15,
       m: 20,
       g: 30
-    }
+    },
+    // Papel de Arroz: R$ 15 fixo
+    artRicePaper: 15
   };
 
   const calcForm = {
@@ -287,6 +289,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const cost = cakePrices.artDark[calcForm.size] || 0;
         extraCost += cost;
         artNames.push(`Pintura Cor Escura (+R$ ${cost})`);
+      } else if (artType === 'ricepaper') {
+        const cost = cakePrices.artRicePaper;
+        extraCost += cost;
+        artNames.push(`Papel de Arroz (+R$ ${cost})`);
       }
     });
 
