@@ -88,27 +88,10 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     // Adicional de Formato Coração: R$ 15
     shapeHeart: 15,
-    // Nutella / Geleia Adicional por tamanho:
-    extraNutella: {
-      pp: 10,
-      p: 20,
-      m: 30,
-      g: 50
-    },
-    // Decoração Vintage por tamanho:
-    artVintage: {
-      pp: 5,
-      p: 15,
-      m: 25,
-      g: 35
-    },
-    // Decoração com Cores Escuras (Pintura por Pulverização) por tamanho:
-    artDark: {
-      pp: 15,
-      p: 15,
-      m: 20,
-      g: 30
-    },
+    // Adicionais com valor médio destacado
+    extraNutella: 20,
+    artVintage: 20,
+    artDark: 20,
     // Papel de Arroz: R$ 15 fixo
     artRicePaper: 15
   };
@@ -197,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Adicionais (Nutella / Geleia)
     if (calcForm.extra === 'nutella') {
-      const cost = cakePrices.extraNutella[calcForm.size] || 0;
+      const cost = cakePrices.extraNutella;
       extraCost += cost;
       extraName = `Nutella/Geleia (+R$ ${cost})`;
     } else {
@@ -206,18 +189,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 4. Arte / Decoração
     if (calcForm.art === 'vintage') {
-      const cost = cakePrices.artVintage[calcForm.size] || 0;
+      const cost = cakePrices.artVintage;
       extraCost += cost;
       artName = `Vintage Customizada (+R$ ${cost})`;
     } else if (calcForm.art === 'dark') {
-      const cost = cakePrices.artDark[calcForm.size] || 0;
+      const cost = cakePrices.artDark;
       extraCost += cost;
       artName = `Pintura Cor Escura (+R$ ${cost})`;
     } else if (calcForm.art === 'ricepaper') {
       extraCost += cakePrices.artRicePaper;
       artName = `Papel de Arroz (+R$ 15)`;
     } else {
-      artName = 'Padrão Clássico (Incluso)';
+      artName = 'Padrão Clássico (Inclusa)';
     }
 
     // 5. Total

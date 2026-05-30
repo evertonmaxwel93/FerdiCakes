@@ -805,19 +805,33 @@ h1, h2, h3, h4 {
 /* Opções de Seleção Visual (Grid de Rádios) */
 .options-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 12px;
 }
 
 .option-card {
   border: 1px solid var(--clr-brand-rose-light);
   border-radius: var(--border-radius-sm);
-  padding: 16px;
+  padding: 16px 8px;
   text-align: center;
   cursor: pointer;
   transition: var(--transition-smooth);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 105px; /* Garante altura uniforme para todos os cards */
 }
+
+.option-card-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  word-break: break-word; /* Evita quebras que vazem o card */
+  line-height: 1.2;
+}
+
 
 .option-card input[type="radio"],
 .option-card input[type="checkbox"] {
