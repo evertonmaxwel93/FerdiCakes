@@ -246,7 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Formato
     if (calcForm.shape === 'heart') {
       extraCost += cakePrices.shapeHeart;
-      shapeName = 'Coração (+R$ 15)';
+      shapeName = 'Coração (+15,00)';
     } else {
       shapeName = 'Redondo (Incluso)';
     }
@@ -258,22 +258,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (nutellaSub) {
       const priceVal = cakePrices.extraNutella[calcForm.size];
-      nutellaSub.textContent = `+ R$ ${priceVal},00`;
+      nutellaSub.textContent = `+ ${priceVal},00`;
     }
     if (vintageSub) {
       const priceVal = cakePrices.artVintage[calcForm.size];
-      vintageSub.textContent = `+ R$ ${priceVal},00`;
+      vintageSub.textContent = `+ ${priceVal},00`;
     }
     if (darkSub) {
       const priceVal = cakePrices.artDark[calcForm.size];
-      darkSub.textContent = `+ R$ ${priceVal},00`;
+      darkSub.textContent = `+ ${priceVal},00`;
     }
 
     // 3. Adicionais (Nutella / Geleia)
     if (calcForm.extra === 'nutella') {
       const cost = cakePrices.extraNutella[calcForm.size] || 0;
       extraCost += cost;
-      extraName = `Nutella/Geleia (+R$ ${cost})`;
+      extraName = `Nutella/Geleia (+${cost},00)`;
     } else {
       extraName = 'Nenhum';
     }
@@ -284,15 +284,15 @@ document.addEventListener('DOMContentLoaded', () => {
       if (artType === 'vintage') {
         const cost = cakePrices.artVintage[calcForm.size] || 0;
         extraCost += cost;
-        artNames.push(`Vintage Customizada (+R$ ${cost})`);
+        artNames.push(`Vintage Customizada (+${cost},00)`);
       } else if (artType === 'dark') {
         const cost = cakePrices.artDark[calcForm.size] || 0;
         extraCost += cost;
-        artNames.push(`Pintura Cor Escura (+R$ ${cost})`);
+        artNames.push(`Pintura Cor Escura (+${cost},00)`);
       } else if (artType === 'ricepaper') {
         const cost = cakePrices.artRicePaper;
         extraCost += cost;
-        artNames.push(`Papel de Arroz (+R$ ${cost})`);
+        artNames.push(`Papel de Arroz (+${cost},00)`);
       }
     });
 
@@ -313,7 +313,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (resExtra) resExtra.textContent = extraName;
     if (resArt) resArt.textContent = artName;
-    if (totalPriceEl) totalPriceEl.textContent = `R$ ${finalPrice.toFixed(2).replace('.', ',')}`;
+    if (totalPriceEl) totalPriceEl.textContent = `${finalPrice.toFixed(2).replace('.', ',')}`;
 
     // Configurar URL do WhatsApp Dinamicamente
     if (btnOrder) {

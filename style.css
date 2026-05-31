@@ -812,7 +812,7 @@ h1, h2, h3, h4 {
 .option-card {
   border: 1px solid var(--clr-brand-rose-light);
   border-radius: var(--border-radius-sm);
-  padding: 16px 8px;
+  padding: 10px 8px;
   text-align: center;
   cursor: pointer;
   transition: var(--transition-smooth);
@@ -821,7 +821,7 @@ h1, h2, h3, h4 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 105px; /* Garante altura uniforme para todos os cards */
+  min-height: 75px; /* Altura compacta e uniforme para todos os cards */
 }
 
 .option-card-title {
