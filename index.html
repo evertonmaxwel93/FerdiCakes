@@ -27,6 +27,49 @@
   <!-- Scripts e Ícones (FontAwesome para detalhes) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <script src="app.js" defer></script>
+  
+  <!-- Schema Markup JSON-LD (SEO Local para Confeitaria) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "Ferdi Cakes",
+    "image": "https://evertonmaxwel93.github.io/FerdiCakes/assets/images/logo.png",
+    "@id": "https://evertonmaxwel93.github.io/FerdiCakes/",
+    "url": "https://evertonmaxwel93.github.io/FerdiCakes/",
+    "telephone": "+55-21-97063-7287",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Joaquim da Costa Lima, 1083 - Vilar Novo",
+      "addressLocality": "Belford Roxo",
+      "addressRegion": "RJ",
+      "postalCode": "26145-000",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -22.7538,
+      "longitude": -43.3995
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "sameAs": [
+      "https://www.instagram.com/ferdicakes/"
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -202,7 +245,7 @@
             <!-- Bolo G -->
             <div class="menu-card" id="card-bolo-g">
               <div class="menu-card-img">
-                <img src="./assets/images/background.jpg" alt="Bolo G Artístico por Ferdi Cakes">
+                <img src="./assets/images/background.jpg" alt="Bolo G Artístico por Ferdi Cakes" style="object-position: center 60%;">
                 <span class="menu-card-badge">G (25cm)</span>
               </div>
               <div class="menu-card-content">
@@ -230,7 +273,7 @@
                 <p class="menu-card-desc">Cerca de 450g de gostosura. Deliciosa cobertura em buttercream tradicional, com frases ou bonequinhos clássicos (Flork) personalizados sob medida para rir ou emocionar.</p>
                 <div class="menu-card-footer">
                   <div class="menu-card-price">50<span>,00</span></div>
-                  <a href="https://wa.me/5521970637287?text=Ol%C3%A1%20Fernanda!%20Gostaria%20de%20encomendar%20um%20Bento%20Cake%20personalizado." target="_blank" rel="noopener" class="btn btn-gold btn-sm"><i class="fa-brands fa-whatsapp"></i> Pedir Bento</a>
+                  <a href="https://wa.me/5521970637287?text=Ol%C3%A1%20Fernanda!%20Gostaria%20de%20encomendar%20um%20Bento%20Cake%20personalizado." target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm"><i class="fa-brands fa-whatsapp"></i> Pedir Bento</a>
                 </div>
               </div>
             </div>
@@ -247,7 +290,7 @@
                 <p class="menu-card-desc">Deliciosa massa molhadinha de baunilha ou chocolate, super recheado e com topo generoso de chantininho gourmet (mínimo de 6 unidades).</p>
                 <div class="menu-card-footer" style="margin-top: 40px;">
                   <div class="menu-card-price">7<span>,50</span> <small style="font-size: 0.8rem; font-weight: normal; color: var(--clr-brand-cocoa-muted);">/unid</small></div>
-                  <span class="menu-card-badge">Gourmet</span>
+                  <a href="https://wa.me/5521970637287?text=Ol%C3%A1%20Fernanda!%20Gostaria%20de%20encomendar%20Cupcakes%20Recheados%20personalizados." target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm"><i class="fa-brands fa-whatsapp"></i> Pedir</a>
                 </div>
               </div>
             </div>
@@ -259,7 +302,7 @@
                 <p class="menu-card-desc">Crocante por fora, macio por dentro e generosamente recheado com Nutella pura de alta qualidade (pedido mínimo a partir de 20 unidades).</p>
                 <div class="menu-card-footer" style="margin-top: 40px;">
                   <div class="menu-card-price">4<span>,50</span> <small style="font-size: 0.8rem; font-weight: normal; color: var(--clr-brand-cocoa-muted);">/unid</small></div>
-                  <span class="menu-card-badge">Com Nutella</span>
+                  <a href="https://wa.me/5521970637287?text=Ol%C3%A1%20Fernanda!%20Gostaria%20de%20encomendar%20Mini%20Cookies%20Americano%20recheados." target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm"><i class="fa-brands fa-whatsapp"></i> Pedir</a>
                 </div>
               </div>
             </div>
@@ -271,7 +314,7 @@
                 <p class="menu-card-desc">Nossos docinhos tradicionais super cremosos para festas. Sabores: Brigadeiro Meio Amargo, Cajuzinho, Ninho, Beijinho e Bicho de Pé (15g cada).</p>
                 <div class="menu-card-footer" style="margin-top: 40px;">
                   <div class="menu-card-price">120<span>,00</span></div>
-                  <span class="menu-card-badge">Festa</span>
+                  <a href="https://wa.me/5521970637287?text=Ol%C3%A1%20Fernanda!%20Gostaria%20de%20encomendar%20um%20Cento%20de%20Doces%20personalizados." target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm"><i class="fa-brands fa-whatsapp"></i> Pedir</a>
                 </div>
               </div>
             </div>
@@ -283,7 +326,7 @@
                 <p class="menu-card-desc">Meio cento de docinhos tradicionais super cremosos para festas. Sabores: Brigadeiro Meio Amargo, Cajuzinho, Ninho, Beijinho e Bicho de Pé (15g cada).</p>
                 <div class="menu-card-footer" style="margin-top: 40px;">
                   <div class="menu-card-price">70<span>,00</span></div>
-                  <span class="menu-card-badge">Prático</span>
+                  <a href="https://wa.me/5521970637287?text=Ol%C3%A1%20Fernanda!%20Gostaria%20de%20encomendar%20Meio%20Cento%20de%20Doces%20personalizados." target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm"><i class="fa-brands fa-whatsapp"></i> Pedir</a>
                 </div>
               </div>
             </div>
